@@ -6,7 +6,7 @@ syn match sshAuthorizedKeyOptionValue '=\@<="\(\\\"\|[^"]\)*"' contained
 
 runtime! syntax/sshkey.vim
 
-hi def link sshAuthorizedKeyOptionKeyword Identifier
+hi def link sshAuthorizedKeyOptionKeyword Keyword
 hi def link sshAuthorizedKeyOptionSeparator Punctuation
 hi def link sshAuthorizedKeyOptionAssignment Operator
 hi def link sshAuthorizedKeyOptionValue String
