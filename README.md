@@ -1,6 +1,6 @@
 # Vim Syntax for SSH Keys and Related Filetypes
 
-Vim syntax files for SSH public keys, known hosts and authorized keys.
+Vim syntax files for SSH public keys, known hosts, authorized keys and allowed signers.
 
 ## Usage
 
@@ -11,7 +11,8 @@ Vim syntax files for SSH public keys, known hosts and authorized keys.
        pattern = {
            ["${HOME}/.ssh/[%w_]+.pub"] = "sshkey",
            ["${HOME}/.ssh/authorized_keys"] = "sshauthorizedkeys",
-           ["${HOME}/.ssh/known_hosts"] = "sshknownhosts"
+           ["${HOME}/.ssh/known_hosts"] = "sshknownhosts",
+           ["${HOME}/.ssh/allowed_signers"] = "sshallowedsigners"
        }
    })
    ```
