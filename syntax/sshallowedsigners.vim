@@ -9,7 +9,7 @@ syn keyword sshAllowedSignerOptionKeyword valid-after contained
 syn keyword sshAllowedSignerOptionKeyword valid-before contained
 syn match sshAllowedSignerOptionSeparator "," contained
 syn match sshAllowedSignerOptionAssignment "=" contained
-syn match sshAllowedSignerOptionValue '=\@<="\(\\\"\|[^"]\)*"' contained
+syn match sshAllowedSignerOptionValue '"\(\\\"\|[^"]\)*"' contained
 
 runtime! syntax/sshkey.vim
 

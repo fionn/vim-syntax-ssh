@@ -3,7 +3,7 @@ syn cluster sshAuthorizedKeyOption contains=sshAuthorizedKeyOptionKeyword,sshAut
 syn match sshAuthorizedKeyOptionKeyword "[a-z-]\+" contained
 syn match sshAuthorizedKeyOptionSeparator "," contained
 syn match sshAuthorizedKeyOptionAssignment "=" contained
-syn match sshAuthorizedKeyOptionValue '=\@<="\(\\\"\|[^"]\)*"' contained
+syn match sshAuthorizedKeyOptionValue '"\(\\\"\|[^"]\)*"' contained
 
 runtime! syntax/sshkey.vim
 
