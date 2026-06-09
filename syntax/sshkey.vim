@@ -8,10 +8,10 @@ syn keyword sshKeyType ecdsa-sha2-nistp521 nextgroup=sshKeyBase64Encoded skipwhi
 syn keyword sshKeyType sk-ecdsa-sha2-nistp256@openssh.com nextgroup=sshKeyBase64Encoded skipwhite
 syn keyword sshKeyType ssh-rsa nextgroup=sshKeyBase64Encoded skipwhite
 
-syn match sshKeyBase64Encoded "\<AAAA[a-zA-Z0-9/+]\{64,8000}=\{,2}\(\s\|$\)" contains=sshKeyComment
-syn match sshKeyComment "\s\<.*$" contained
+syn match sshKeyBase64Encoded "AAAA[a-zA-Z0-9/+]\{64,8000}=\{,2}" contained nextgroup=sshKeyComment
+syn match sshKeyComment ".*$" contained
 
-syn match sshKeyComment "\v#.*$"
+syn match sshKeyComment "#.*$"
 
 hi def link sshKeyType Type
 hi def link sshKeyBase64Encoded String
