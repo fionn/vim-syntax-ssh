@@ -2,7 +2,8 @@
 " not straightforward.
 syn match sshAllowedSignerPrincipal "^[a-zA-Z0-9@\.\*!-]\+\(,[a-zA-Z0-9@\.\*!-]\+\)*" nextgroup=sshAllowedSignerOptions skipwhite
 
-syn region sshAllowedSignerOptions start="\S" end="\s\@=" contains=sshAllowedSignerOptionKeyword,sshAllowedSignerOptionSeparator,sshAllowedSignerOptionAssignment,sshAllowedSignerOptionValue oneline contained
+syn region sshAllowedSignerOptions start="\S" end="\s\@=" contains=@sshAllowedSignerOption nextgroup=sshKeyType skipwhite oneline contained
+syn cluster sshAllowedSignerOption contains=sshAllowedSignerOptionKeyword,sshAllowedSignerOptionSeparator,sshAllowedSignerOptionAssignment,sshAllowedSignerOptionValue
 syn keyword sshAllowedSignerOptionKeyword namespaces contained
 syn keyword sshAllowedSignerOptionKeyword cert-authority contained
 syn keyword sshAllowedSignerOptionKeyword valid-after contained
