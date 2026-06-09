@@ -1,4 +1,5 @@
-syn region sshAuthorizedKeyOptions start="^[a-z]" end="\s" contains=sshAuthorizedKeyOptionKeyword,sshAuthorizedKeyOptionSeparator,sshAuthorizedKeyOptionAssignment,sshAuthorizedKeyOptionValue nextgroup=sshKeyType skipwhite oneline
+syn region sshAuthorizedKeyOptions start="^[a-z]" end="\s" contains=@sshAuthorizedKeyOption nextgroup=sshKeyType skipwhite oneline
+syn cluster sshAuthorizedKeyOption contains=sshAuthorizedKeyOptionKeyword,sshAuthorizedKeyOptionSeparator,sshAuthorizedKeyOptionAssignment,sshAuthorizedKeyOptionValue
 syn match sshAuthorizedKeyOptionKeyword "[a-z-]\+" contained
 syn match sshAuthorizedKeyOptionSeparator "," contained
 syn match sshAuthorizedKeyOptionAssignment "=" contained
