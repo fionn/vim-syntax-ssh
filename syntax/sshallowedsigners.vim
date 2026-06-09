@@ -1,19 +1,19 @@
-syn match sshAllowedSignerPrincipal "!\?[a-zA-Z0-9.*?_+-]\+@[a-zA-Z0-9.*?-]\+" nextgroup=sshAllowedSignerPrincipalSeparator,sshAllowedSignerOptions,sshKeyType skipwhite
-syn match sshAllowedSignerPrincipalSeparator "," contained nextgroup=sshAllowedSignerPrincipal
+syn match sshAllowedSignersPrincipal "!\?[a-zA-Z0-9.*?_+-]\+@[a-zA-Z0-9.*?-]\+" nextgroup=sshAllowedSignersPrincipalSeparator,sshAllowedSignersOptions,sshKeyType skipwhite
+syn match sshAllowedSignersPrincipalSeparator "," contained nextgroup=sshAllowedSignersPrincipal
 
-syn region sshAllowedSignerOptions start="[a-z]" end="\s\@=" contains=@sshAllowedSignerOption nextgroup=sshKeyType skipwhite oneline contained
-syn cluster sshAllowedSignerOption contains=sshAllowedSignerOptionKeyword,sshAllowedSignerOptionSeparator,sshAllowedSignerOptionAssignment,sshAllowedSignerOptionValue
-syn keyword sshAllowedSignerOptionKeyword namespaces cert-authority valid-after valid-before contained
-syn match sshAllowedSignerOptionSeparator "," contained
-syn match sshAllowedSignerOptionAssignment "=" contained
-syn match sshAllowedSignerOptionValue '"\(\\\"\|[^"]\)*"' contained
+syn region sshAllowedSignersOptions start="[a-z]" end="\s\@=" contains=@sshAllowedSignersOption nextgroup=sshKeyType skipwhite oneline contained
+syn cluster sshAllowedSignersOption contains=sshAllowedSignersOptionKeyword,sshAllowedSignersOptionSeparator,sshAllowedSignersOptionAssignment,sshAllowedSignersOptionValue
+syn keyword sshAllowedSignersOptionKeyword namespaces cert-authority valid-after valid-before contained
+syn match sshAllowedSignersOptionSeparator "," contained
+syn match sshAllowedSignersOptionAssignment "=" contained
+syn match sshAllowedSignersOptionValue '"\(\\\"\|[^"]\)*"' contained
 
 runtime! syntax/sshkey.vim
 
-hi def link sshAllowedSignerPrincipal Identifier
-hi def link sshAllowedSignerPrincipalSeparator Punctuation
+hi def link sshAllowedSignersPrincipal Identifier
+hi def link sshAllowedSignersPrincipalSeparator Punctuation
 
-hi def link sshAllowedSignerOptionKeyword Keyword
-hi def link sshAllowedSignerOptionSeparator Punctuation
-hi def link sshAllowedSignerOptionAssignment Operator
-hi def link sshAllowedSignerOptionValue String
+hi def link sshAllowedSignersOptionKeyword Keyword
+hi def link sshAllowedSignersOptionSeparator Punctuation
+hi def link sshAllowedSignersOptionAssignment Operator
+hi def link sshAllowedSignersOptionValue String
