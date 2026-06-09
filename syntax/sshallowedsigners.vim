@@ -1,4 +1,4 @@
-syn match sshAllowedSignerPrincipal "!\?[a-zA-Z0-9.*?_+-]\+@[a-zA-Z0-9.*?]\+" nextgroup=sshAllowedSignerPrincipalSeparator,sshAllowedSignerOptions,sshKeyType skipwhite
+syn match sshAllowedSignerPrincipal "!\?[a-zA-Z0-9.*?_+-]\+@[a-zA-Z0-9.*?-]\+" nextgroup=sshAllowedSignerPrincipalSeparator,sshAllowedSignerOptions,sshKeyType skipwhite
 syn match sshAllowedSignerPrincipalSeparator "," contained nextgroup=sshAllowedSignerPrincipal
 
 syn region sshAllowedSignerOptions start="[a-z]" end="\s\@=" contains=@sshAllowedSignerOption nextgroup=sshKeyType skipwhite oneline contained
