@@ -1,4 +1,4 @@
-syn region sshAuthorizedKeyOptions start="^" end="\s" contains=sshAuthorizedKeyOptionKeyword,sshAuthorizedKeyOptionSeparator,sshAuthorizedKeyoptionAssignment,sshAuthorizedKeyOptionValue oneline
+syn region sshAuthorizedKeyOptions start="^" end="\s" contains=sshAuthorizedKeyOptionKeyword,sshAuthorizedKeyOptionSeparator,sshAuthorizedKeyOptionAssignment,sshAuthorizedKeyOptionValue oneline
 syn match sshAuthorizedKeyOptionKeyword "[a-z-]\+" contained
 syn match sshAuthorizedKeyOptionSeparator "," contained
 syn match sshAuthorizedKeyOptionAssignment "=" contained
