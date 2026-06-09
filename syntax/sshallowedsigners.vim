@@ -4,10 +4,7 @@ syn match sshAllowedSignerPrincipal "^[a-zA-Z0-9@\.\*!-]\+\(,[a-zA-Z0-9@\.\*!-]\
 
 syn region sshAllowedSignerOptions start="\S" end="\s\@=" contains=@sshAllowedSignerOption nextgroup=sshKeyType skipwhite oneline contained
 syn cluster sshAllowedSignerOption contains=sshAllowedSignerOptionKeyword,sshAllowedSignerOptionSeparator,sshAllowedSignerOptionAssignment,sshAllowedSignerOptionValue
-syn keyword sshAllowedSignerOptionKeyword namespaces contained
-syn keyword sshAllowedSignerOptionKeyword cert-authority contained
-syn keyword sshAllowedSignerOptionKeyword valid-after contained
-syn keyword sshAllowedSignerOptionKeyword valid-before contained
+syn keyword sshAllowedSignerOptionKeyword namespaces cert-authority valid-after valid-before contained
 syn match sshAllowedSignerOptionSeparator "," contained
 syn match sshAllowedSignerOptionAssignment "=" contained
 syn match sshAllowedSignerOptionValue '"\(\\\"\|[^"]\)*"' contained
