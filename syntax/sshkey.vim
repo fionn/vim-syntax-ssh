@@ -1,11 +1,11 @@
-setlocal iskeyword=_,-,a-z,A-Z,48-57
+setlocal iskeyword=_,.,@-@,-,a-z,A-Z,48-57
 
 syn keyword sshKeyType ssh-ed25519 nextgroup=sshKeyBase64Encoded skipwhite
-syn match sshKeyType "\<sk-ssh-ed25519@openssh\.com\>" nextgroup=sshKeyBase64Encoded skipwhite
+syn keyword sshKeyType sk-ssh-ed25519@openssh.com nextgroup=sshKeyBase64Encoded skipwhite
 syn keyword sshKeyType ecdsa-sha2-nistp256 nextgroup=sshKeyBase64Encoded skipwhite
 syn keyword sshKeyType ecdsa-sha2-nistp384 nextgroup=sshKeyBase64Encoded skipwhite
 syn keyword sshKeyType ecdsa-sha2-nistp521 nextgroup=sshKeyBase64Encoded skipwhite
-syn match sshKeyType "\<sk-ecdsa-sha2-nistp256@openssh\.com\>" nextgroup=sshKeyBase64Encoded skipwhite
+syn keyword sshKeyType sk-ecdsa-sha2-nistp256@openssh.com nextgroup=sshKeyBase64Encoded skipwhite
 syn keyword sshKeyType ssh-rsa nextgroup=sshKeyBase64Encoded skipwhite
 
 syn match sshKeyBase64Encoded "\<AAAA[a-zA-Z0-9/+]\{64,8000}=\{,2}\(\s\|$\)" contains=sshKeyComment
