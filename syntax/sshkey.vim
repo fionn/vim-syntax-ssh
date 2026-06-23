@@ -1,3 +1,7 @@
+if exists("b:current_syntax")
+    finish
+endif
+
 setlocal iskeyword=_,.,@-@,-,a-z,A-Z,48-57
 
 syn keyword sshKeyType ssh-ed25519 nextgroup=sshKeyBase64Encoded skipwhite
@@ -16,3 +20,5 @@ syn match sshKeyComment "#.*$"
 hi def link sshKeyType Type
 hi def link sshKeyBase64Encoded String
 hi def link sshKeyComment Comment
+
+let b:current_syntax = "sshkey"

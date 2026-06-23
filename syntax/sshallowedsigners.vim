@@ -1,3 +1,7 @@
+if exists("b:current_syntax")
+    finish
+endif
+
 syn match sshAllowedSignersPrincipal "!\?[a-zA-Z0-9.*?_+-]\+@[a-zA-Z0-9.*?-]\+" nextgroup=sshAllowedSignersPrincipalSeparator,sshAllowedSignersOptions,sshKeyType skipwhite
 syn match sshAllowedSignersPrincipalSeparator "," contained nextgroup=sshAllowedSignersPrincipal
 
@@ -17,3 +21,5 @@ hi def link sshAllowedSignersOptionKeyword Keyword
 hi def link sshAllowedSignersOptionSeparator Punctuation
 hi def link sshAllowedSignersOptionAssignment Operator
 hi def link sshAllowedSignersOptionValue String
+
+let b:current_syntax = "sshallowedsigners"

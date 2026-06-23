@@ -1,3 +1,7 @@
+if exists("b:current_syntax")
+    finish
+endif
+
 runtime! syntax/sshkey.vim
 
 syn match sshKnownHostsMarker "^@cert-authority\>" nextgroup=sshKnownHostsHostname,sshKnownHostsHashedHostname skipwhite
@@ -13,3 +17,5 @@ hi def link sshKnownHostsMarker Statement
 hi def link sshKnownHostsHostname Identifier
 hi def link sshKnownHostsHostnameSeparator Punctuation
 hi def link sshKnownHostsHashedHostname Identifier
+
+let b:current_syntax = "sshknownhosts"
