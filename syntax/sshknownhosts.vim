@@ -1,3 +1,9 @@
+" Vim syntax file
+" Language:     OpenSSH known hosts file
+" Author:       Fionn Fitzmaurice (github.com/fionn)
+" Maintainer:   Fionn Fitzmaurice (github.com/fionn)
+" License:      Vim & Apache 2.0
+
 if exists("b:current_syntax")
     finish
 endif
